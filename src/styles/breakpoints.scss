@@ -1,0 +1,90 @@
+$laptop-L: 1440px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobile-L: 425px;
+$mobile-M: 375px;
+$mobile-S: 320px;
+
+// laptop-L
+
+@mixin bp-laptop-L-equal-or-less {
+  @media screen and (max-width: $laptop-L) {
+    @content;
+  }
+}
+
+@mixin bp-laptop-L-higher {
+  @media screen and (min-width: $laptop-L + 1) {
+    @content;
+  }
+}
+
+// Laptop
+
+@mixin bp-laptop-equal-or-less {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin bp-laptop-higher {
+  @media screen and (min-width: $laptop + 1) {
+    @content;
+  }
+}
+
+// Tablet
+
+@mixin bp-tablet-equal-or-less {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin bp-tablet-higher {
+  @media screen and (min-width: $tablet + 1) {
+    @content;
+  }
+}
+
+// Mobile-L
+
+@mixin bp-mobile-L-equal-or-less {
+  @media screen and (max-width: $mobile-L) {
+    @content;
+  }
+}
+
+@mixin bp-mobile-L-higher {
+  @media screen and (min-width: $mobile-L + 1) {
+    @content;
+  }
+}
+
+// Mobile-M
+
+@mixin bp-mobile-M-equal-or-less {
+  @media screen and (max-width: $mobile-M) {
+    @content;
+  }
+}
+
+@mixin bp-mobile-M-higher {
+  @media screen and (min-width: $mobile-M + 1) {
+    @content;
+  }
+}
+
+// Mobile-S
+
+@mixin bp-mobile-S-equal-or-less {
+  @media screen and (max-width: $mobile-S) {
+    @content;
+  }
+}
+
+@mixin bp-mobile-S-higher {
+  @media screen and (min-width: $mobile-S + 1) {
+    @content;
+  }
+}

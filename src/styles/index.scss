@@ -1,0 +1,60 @@
+@import "drop";
+@import "colors";
+@import "variables";
+@import "global";
+@import "fonts";
+@import "breakpoints";
+
+.main {
+  height: 100%;
+}
+
+%primary-font{
+  line-height: 1.6em;
+  font-weight: $primary-bold;
+  color: $accent-color;
+}
+
+%secondary-font{
+  line-height: 1.6em;
+  font-weight: $primary-regular;
+  color: $primary-text-color;
+}
+
+.title-1 {
+  @extend %primary-font;
+  font-size: 24px;
+}
+
+.title-2{
+  @extend %primary-font;
+  font-size: 20px;
+}
+
+.title-3{
+  @extend %primary-font;
+  font-size: 17px;
+}
+
+.body-1{
+  @extend %secondary-font;
+  font-size: 16px;
+}
+
+.body-2{
+  @extend %secondary-font;
+  font-size: 12px;
+}
+
+.link, .link:visited {
+  @extend %primary-font;
+  cursor: pointer;
+  //transition: $default-transition;
+
+  &:hover {
+    color: #2F8FF9;
+    //transition: $default-transition;
+  }
+}
+
+

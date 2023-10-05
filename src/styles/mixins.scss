@@ -1,0 +1,21 @@
+@mixin flex-column($gap: 0px){
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin flex-row($gap: 0px){
+  display: flex;
+  flex-direction: row;
+  gap: $gap;
+}
+
+@mixin vertical-padding($padding-top, $padding-bottom: $padding-top){
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
+
+@mixin horizontal-padding($padding-left, $padding-right: $padding-left){
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
