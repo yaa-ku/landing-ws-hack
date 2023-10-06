@@ -1,0 +1,18 @@
+@import "src/styles/mixins";
+@import "src/styles/colors";
+
+.navigation{
+  @include flex-row(30%);
+  padding-top: 50px;
+
+  &__logo{
+    width: 183px;
+    height: 55px;
+  }
+
+  &__links{
+    @include flex-row(60px);
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -5,6 +5,7 @@ import { Navigation } from '@/components/naviganion/navigation';
 import { MainInfoBlock } from '@/components/mainInfoBlock/mainInfoBlock';
 import { MissionBlock } from '@/components/missionBlock/missionBlock';
 import { currentBlockRenderingType } from '@/app/page';
+import clsx from 'clsx';
 
 export type Props = {
     currentRenderingBlock: currentBlockRenderingType;
@@ -12,10 +13,9 @@ export type Props = {
 };
 export const Header = ({currentRenderingBlock, setCurrentRenderingBlock}:Props) => {
     return (
-        <div className={s['header']}>
+        <div className={clsx(s['header'], 'section')}>
             <Navigation currentRenderingBlock={currentRenderingBlock} setCurrentRenderingBlock={setCurrentRenderingBlock} />
             <MainInfoBlock/>
-            <MissionBlock/>
         </div>
     );
 };

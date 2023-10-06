@@ -1,8 +1,10 @@
+@import "mixins";
+
 #__next {
   height: 100%;
 }
 
 .section{
   width: 100%;
-  //horizontal padding?
+  @include horizontal-padding(100px);
 }

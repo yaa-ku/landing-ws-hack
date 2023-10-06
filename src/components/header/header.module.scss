@@ -1,3 +1,8 @@
-.header{
+@import "src/styles/mixins";
+@import "src/styles/colors";
 
+.header{
+  @include flex-column();
+  background: linear-gradient(80deg, #E8129F 0%, #1511EC 100%), #D9D9D9;
 }
+
