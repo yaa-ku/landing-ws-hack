@@ -5,13 +5,14 @@ import Image from 'next/image';
 import Briefcase from 'public/icons/briefcase.svg';
 import Chart from 'public/icons/chart.svg';
 import Money from 'public/icons/money.svg';
+import clsx from 'clsx';
 
 type Props = {
 
 };
 export const MissionBlock = (props: Props) => {
     return (
-        <div className={s['mission-block']}>
+        <div className={clsx(s['mission-block'], 'section')}>
             <div className={s['mission-block__paragraph']}>
                 <h2 className={'title-3'}>Реализация <br/>
                     <span className={s['highlight']}>

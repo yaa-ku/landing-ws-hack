@@ -10,7 +10,7 @@ type Props = {
 };
 export const Landing = ({currentRenderingBlock}: Props) => {
     return (
-        <div className={'section'}>
+        <div>
             <MissionBlock/>
             {currentRenderingBlock==='student' ?
             <StudentsBlock/>

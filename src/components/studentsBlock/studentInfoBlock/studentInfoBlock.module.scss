@@ -1,0 +1,30 @@
+@import "src/styles/mixins";
+@import "src/styles/colors";
+
+.info-block{
+  padding-bottom: 50px;
+  padding-top: 50px;
+  @include flex-column(100px);
+
+  &__article{
+    align-content: center;
+    @include flex-row(20px);
+    justify-content: space-between;
+  }
+}
+
+.article__paragraph{
+  max-width: 50%;
+  align-self: center;
+  @include flex-column(30px);
+}
+
+.align-top{
+  align-content: start;
+}
+
+.highlight{
+  color: $primary-text-color;
+  background-color: $accent-color;
+  padding: 10px;
+}
