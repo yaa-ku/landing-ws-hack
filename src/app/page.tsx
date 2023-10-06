@@ -1,15 +1,19 @@
+'use client'
+import React, { useState } from 'react';
 import { Landing } from '@/components/landing/landing';
+import { Header } from '@/components/header/header';
+import { Footer } from '@/components/footer/footer';
+
+export type currentBlockRenderingType = 'student' | 'business';
 
 export default function Home() {
+
+    const [currentRenderingBlock, setCurrentRenderingBlock] = useState<currentBlockRenderingType>('student')
   return (
     <main className={'main'}>
-        <p className={'title-1'}>h1</p>
-        <p className={'title-2'}>h2</p>
-        <p className={'title-3'}>h3</p>
-        <p className={'body-1'}>body-1</p>
-        <p className={'body-2'}>body-2</p>
-        <p className={'link'}>link</p>
-        <Landing/>
+        <Header currentRenderingBlock={currentRenderingBlock} setCurrentRenderingBlock={setCurrentRenderingBlock}/>
+        <Landing currentRenderingBlock={currentRenderingBlock}/>
+        <Footer/>
     </main>
   )
 }

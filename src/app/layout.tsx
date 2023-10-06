@@ -1,10 +1,6 @@
 import "src/styles/index.scss";
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { PropsWithChildren } from 'react';
-
-//TODO: change font
-const inter = Inter({ subsets: ['latin'] })
 
 
 //TODO: change metadata
@@ -16,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

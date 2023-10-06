@@ -1,12 +1,19 @@
-// @flow
+import s from './landing.module.scss';
 import * as React from 'react';
-import s from './landing.module.scss'
+import { StudentsBlock } from '@/components/studentsBlock/studentsBlock';
+import { BusinessBlock } from '@/components/businessBlock/businessBlock';
+import { currentBlockRenderingType } from '@/app/page';
 
-export const Landing = () => {
+type Props = {
+    currentRenderingBlock: currentBlockRenderingType;
+};
+export const Landing = ({currentRenderingBlock}: Props) => {
     return (
-        <div className={s['landing']}>
-            {/*<Header/>*/}
-            {/*<Footer />*/}
+        <div>
+            {currentRenderingBlock==='student' ?
+            <StudentsBlock/>
+            :
+            <BusinessBlock/>}
         </div>
     );
 };
