@@ -97,7 +97,7 @@ const MapComponent: React.FC = () => {
                 </YMaps>
 
             </div>
-            <div className="right-panel">
+            {currentPartner? <div className="right-panel">
                 <div className="title-img-container">
                     <img className={'image'} src={`https://ht.dicamp.ru/${currentPartner?.iconUrl}`} alt=""/>
                     <div className={'name-address'}>
@@ -107,9 +107,15 @@ const MapComponent: React.FC = () => {
 
                 </div>
                 <p>{currentPartner?.description}</p>
+                <p className={'text_cell_'}>
+                    Возможное использование баллов:
+                </p>
+               <p>{currentPartner?.services.map((marker:Service) => (
+                            <li>{marker.title}</li>
+                        ))}
+                    </p>
 
-
-            </div>
+            </div>:""}
         </div>
     );
 };
