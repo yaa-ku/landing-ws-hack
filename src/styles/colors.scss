@@ -3,12 +3,14 @@ $white: #fff;
 $black: #000;
 
 //project colors
-$background-color: #f5f5f5;
-$primary-color: #2F8FF9;
-$accent-color: #6646a9;
+$background-color: $black;
+$primary-color: #E8129F;
+$secondary-color: #1511EC;
+$accent-color: #ead61e;
 $additional-color: $white;
 
 //fonts-colors
 $primary-text-color: $black;
+$secondary-text-color: $white;
 $accent-text-color: $accent-color;
-$additional-text-color: $background-color;
+

@@ -1,4 +1,22 @@
+//fonts
+@font-face {
+  font-family: 'Cirle';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../ui-kit/fonts/Circe-Regular.ttf') format('truetype');
+}
+
+/* Жирный */
+@font-face {
+  font-family: 'Cirle bold';
+  src: url('../ui-kit/fonts/Circe-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Angry';
+  src: url('../ui-kit/fonts/Angry.otf') format('truetype');
+}
+
 //bald-styles
-$primary-bold: 600;
-$primary-regular: 500;
-$primary-light: 400;
+$primary-bold: 700;
+$primary-regular: 400;

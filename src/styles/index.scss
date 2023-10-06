@@ -4,56 +4,98 @@
 @import "global";
 @import "fonts";
 @import "breakpoints";
+@import "fonts";
 
 .main {
   height: 100%;
 }
 
 %primary-font{
-  line-height: 1.6em;
-  font-weight: $primary-bold;
-  color: $accent-color;
+  font-family: Cirle;
+  line-height: 120%;
+
+}
+%primary-font-bold{
+  font-family: "Cirle bold";
+  line-height: 120%;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
 }
 
 %secondary-font{
-  line-height: 1.6em;
-  font-weight: $primary-regular;
-  color: $primary-text-color;
+  font-family: Angry;
 }
 
 .title-1 {
-  @extend %primary-font;
-  font-size: 24px;
+  @extend %secondary-font;
+  color: $primary-text-color;
+  line-height: 60px;
+  font-size: 61px;
 }
 
 .title-2{
-  @extend %primary-font;
-  font-size: 20px;
+  @extend %secondary-font;
+  line-height: 140%;
+  font-size: 50px;
+
+  &--primary{
+    @extend .title-2;
+    color: $primary-text-color;
+  }
+
+  &--secondary{
+    @extend .title-2;
+    color: $secondary-text-color;
+  }
 }
 
 .title-3{
-  @extend %primary-font;
-  font-size: 17px;
+  @extend %secondary-font;
+  line-height: 140%;
+  font-size: 40px;
+
+  &--primary{
+    @extend .title-3;
+    color: $primary-text-color;
+  }
+
+  &--secondary{
+    @extend .title-3;
+    color: $secondary-text-color;
+  }
 }
 
 .body-1{
-  @extend %secondary-font;
-  font-size: 16px;
+  @extend %primary-font;
+  font-size: 26px;
+
+  &--primary{
+    @extend .body-1;
+    color: $primary-text-color;
+  }
+
+  &--secondary{
+    @extend .body-1;
+    color: $secondary-text-color;
+  }
 }
 
 .body-2{
-  @extend %secondary-font;
-  font-size: 12px;
+  @extend %primary-font-bold;
+  color: $secondary-text-color;
+  font-size: 14px;
 }
 
 .link, .link:visited {
   @extend %primary-font;
   cursor: pointer;
-  //transition: $default-transition;
+  font-size: 20px;
+  color: $secondary-text-color;
+  transition: $default-transition;
 
   &:hover {
-    color: #2F8FF9;
-    //transition: $default-transition;
+    color: $accent-text-color;
+    transition: $default-transition;
   }
 }
 
