@@ -1,0 +1,21 @@
+@import "src/styles/mixins";
+@import "src/styles/colors";
+
+.footer{
+  background-color: $background-color;
+  align-content: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  @include flex-row();
+  justify-content: space-between;
+
+  &__logo{}
+
+  &__link{
+
+    &-list{
+      align-self: center;
+      @include flex-row(40px);
+    }
+  }
+}
