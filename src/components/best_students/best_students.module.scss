@@ -1,0 +1,73 @@
+.best_students_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #1F2021;
+    color: #FFF;
+    padding: 80px 250px 108px 250px;
+}
+
+.gradient_line {
+    height: 15px;
+    margin-top: 18px;
+    background: rgb(232,18,159);
+    background: linear-gradient(90deg, rgba(232,18,159,1) 0%, rgba(9,9,121,1) 100%, rgba(21,17,236,1) 100%);
+}
+
+.gradient_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.best_students_block_list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.block_title {
+    font-size: 40px;
+}
+
+.profile_item {
+    gap: 32px;
+    display:flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    .profile_image {
+        border-radius: 100%;
+        height: 100px;
+        width: 100px;
+        margin-left: 15px;
+    }
+    .student_name {
+        font-size: 22px;
+    }
+    .borderGold {
+        border: 4px solid #EAD61E;
+    }
+
+    .borderSilver {
+        border: 4px solid #CDCDCD;
+    }
+
+    .borderBronze {
+        border: 4px solid #AA6F16;
+    }
+   
+}
+.name_and_uni {
+    display: flex;
+    flex-direction: column;
+}
+.points_and_text {
+    display: flex;
+    flex-direction: column;
+}
+.student_info {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
