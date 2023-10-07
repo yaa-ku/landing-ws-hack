@@ -9,7 +9,7 @@ type Props = {
 };
 export const StudentInfolock = (props: Props) => {
     return (
-        <div className={s['info-block']}>
+        <div className={clsx(s['info-block'], 'section')}>
             <div className={s['info-block__article']}>
                 <div className={s['article__img']}>
                         <Image src={'/girl-img.png'} alt={'girl-img'}

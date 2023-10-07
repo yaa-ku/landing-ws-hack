@@ -1,0 +1,42 @@
+@import "src/styles/mixins";
+@import "src/styles/colors";
+
+.form{
+  padding-top: 120px;
+  @include flex-row(50px);
+}
+
+.title{
+  max-width: 50%;
+}
+
+.input{
+  width: 100%;
+  border: 1px solid $black;
+  padding: 10px;
+
+  &-block{
+    @include flex-column(10px)
+  }
+}
+
+.form-block{
+  width: 50%;
+  @include flex-column(16px);
+}
+
+.text-area{
+  width: 100%;
+  border: 1px solid $black;
+  padding: 10px;
+  min-height: 120px;
+}
+
+.button{
+  align-content: center;
+  border-radius: 10px;
+  width: max-content;
+  color: $black;
+  padding: 24px 40px;
+}
+

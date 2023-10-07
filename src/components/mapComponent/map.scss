@@ -1,0 +1,35 @@
+.horizontal-split-container {
+  display: flex;
+  height: 75%;
+
+}
+
+.left-panel {
+  flex: 0.7;
+  background-color: #f0f0f0;
+}
+
+.right-panel {
+  flex: 0.3;
+   padding: 60px;
+  background-color: #e0e0e0;
+  .image {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    border: 5px solid #e0e0e0;;
+  }
+  .title-img-container {
+    display: flex;
+    gap: 32px;
+    justify-content: flex-start;
+    align-items: center;
+    .name-address {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .text_cell_ {
+    margin:10px 0 0 0;
+    }
+}
