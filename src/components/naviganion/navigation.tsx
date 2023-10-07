@@ -1,20 +1,38 @@
-// @flow 
+'use client'
+// @flow
 import * as React from 'react';
 import s from './navigation.module.scss';
-import { currentBlockRenderingType } from '@/app/page';
 import Logo from 'public/logo.svg';
+import Link from 'next/link';
+import clsx from 'clsx';
+import { useState } from 'react';
 
-type Props = {
-    currentRenderingBlock: currentBlockRenderingType;
-    setCurrentRenderingBlock: React.Dispatch<React.SetStateAction<currentBlockRenderingType>>;
-};
-export const Navigation = ({setCurrentRenderingBlock}: Props) => {
+type ActivePageType = 'students' | 'business';
+
+export const Navigation = () => {
+
+    const [activePage, setActivePage] = useState<ActivePageType>('students');
+
     return (
         <div className={s['navigation']}>
             <Logo className={s['navigation__logo']}/>
             <div className={s['navigation__links']}>
-                <p  className={'link'} onClick={() => setCurrentRenderingBlock('student')}>Студентам</p>
-                <p className={'link'} onClick={() => setCurrentRenderingBlock('business')}>Бизнес-партнёрам</p>
+                <Link
+                    className={clsx('link', activePage === 'students' && s['active-link'])}
+                    href={'/'}
+                    scroll={false}
+                    onClick={() => setActivePage('students')}
+                >
+                    Студентам
+                </Link>
+                <Link
+                    className={clsx('link', activePage === 'business' && s['active-link'])}
+                    href={'/businessPage/'}
+                    scroll={false}
+                    onClick={() => setActivePage('business')}
+                >
+                    Бизнес-партнёрам
+                </Link>
             </div>
 
         </div>

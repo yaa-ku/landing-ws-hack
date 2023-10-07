@@ -1,20 +1,15 @@
-'use client'
-import React, { useState } from 'react';
-import { Landing } from '@/components/landing/landing';
-import { Header } from '@/components/header/header';
-import { Footer } from '@/components/footer/footer';
+import { StudentInfolock } from '@/components/studentsBlock/studentInfolock';
+import { BestStudents } from '@/components/bestStudents/bestStudents';
 import MapComponent from '@/components/mapComponent/mapComponent';
+import * as React from 'react';
+import s from './studentPage.module.scss'
 
-export type currentBlockRenderingType = 'student' | 'business';
-
-export default function Home() {
-
-    const [currentRenderingBlock, setCurrentRenderingBlock] = useState<currentBlockRenderingType>('student')
+export default function StudentPage() {
   return (
-    <main className={'main'}>
-        <Header currentRenderingBlock={currentRenderingBlock} setCurrentRenderingBlock={setCurrentRenderingBlock}/>
-        <Landing currentRenderingBlock={currentRenderingBlock}/>
-        <Footer/>
+    <main className={s['student-page']}>
+        <StudentInfolock/>
+        <BestStudents/>
+        <MapComponent/>
     </main>
   )
 }

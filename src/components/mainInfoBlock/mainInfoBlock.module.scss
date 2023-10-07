@@ -24,6 +24,7 @@
 
 .text__links{
   @include flex-row(20px);
+
   &-link{
   }
 }
@@ -33,3 +34,4 @@
   background-color: $accent-color;
   padding: 35px 15px
 }
+
