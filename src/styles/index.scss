@@ -2,7 +2,6 @@
 @import "colors";
 @import "variables";
 @import "global";
-@import "fonts";
 @import "breakpoints";
 @import "fonts";
 
@@ -29,14 +28,28 @@
 .title-1 {
   @extend %secondary-font;
   color: $primary-text-color;
-  line-height: 60px;
-  font-size: 61px;
+  line-height: 100%;
+  font-size: 80px;
+
+  @include bp-laptop-XL-equal-or-less{
+    line-height: 60px;
+    font-size: 61px;
+  }
+
+  @include bp-laptop-L-equal-or-less{
+    line-height: 50px;
+    font-size: 50px;
+  }
 }
 
 .title-2{
   @extend %secondary-font;
   line-height: 140%;
-  font-size: 50px;
+  font-size: 70px;
+
+  @include bp-laptop-XL-equal-or-less{
+    font-size: 50px;
+  }
 
   &--primary{
     @extend .title-2;
@@ -67,7 +80,11 @@
 
 .body-1{
   @extend %primary-font;
-  font-size: 26px;
+  font-size: 35px;
+
+  @include bp-laptop-XL-equal-or-less{
+    font-size: 26px;
+  }
 
   &--primary{
     @extend .body-1;

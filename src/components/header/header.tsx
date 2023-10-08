@@ -3,7 +3,6 @@ import * as React from 'react';
 import s from './header.module.scss'
 import { Navigation } from '@/components/naviganion/navigation';
 import { MainInfoBlock } from '@/components/mainInfoBlock/mainInfoBlock';
-import { MissionBlock } from '@/components/missionBlock/missionBlock';
 import clsx from 'clsx';
 
 export const Header = () => {

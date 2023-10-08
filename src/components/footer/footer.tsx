@@ -13,7 +13,7 @@ export const Footer = () => {
             <div className={s['footer__link-list']}>
                 <Link className={'link'} href={'#'}>Пользовательское соглашение</Link>
                 <Link className={'link'} href={'#'}>Политика конфиденциальности</Link>
-                <Link className={'link'} href={'#'}>Удаление персональныз данных</Link>
+                <Link className={'link'} href={'#'}>Удаление персональных данных</Link>
             </div>
         </div>
     );

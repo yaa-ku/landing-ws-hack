@@ -1,9 +1,16 @@
 @import "src/styles/mixins";
 @import "src/styles/colors";
+@import "src/styles/breakpoints";
 
 .main-info-block{
   @include flex-row(64px);
   justify-content: center;
+
+  &__img{
+    max-width: 50%;
+    min-width: 620px;
+    align-self: end;
+  }
 
   &__text{
     padding-bottom: 100px;
@@ -16,16 +23,22 @@
 
 .text__block{
   @include flex-column(16px);
+
+  &-container{
+    @include flex-row()
+  }
 }
 
 .text__paragraph{
+  max-width: 80%;
   @include flex-column(50px);
 }
 
 .text__links{
   @include flex-row(20px);
 
-  &-link{
+  @include bp-laptop-L-equal-or-less{
+  @include flex-column(10px)
   }
 }
 
@@ -34,4 +47,9 @@
   background-color: $accent-color;
   padding: 35px 15px
 }
+
+.text__img{
+  align-self: end;
+}
+
 

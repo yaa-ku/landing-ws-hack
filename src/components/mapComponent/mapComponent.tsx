@@ -2,6 +2,7 @@
 import React, {useEffect, useState} from 'react';
 import {YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 import './map.scss';
+import clsx from 'clsx';
 
 async function get_request_api<T>(url: string): Promise<T> {
     return fetch(url)
@@ -94,20 +95,20 @@ const MapComponent: React.FC = () => {
                 <div className="title-img-container">
                     <img className={'image'} src={`https://ht.dicamp.ru/${currentPartner?.iconUrl}`} alt=""/>
                     <div className={'name-address'}>
-                        <h1>{currentPartner?.title}</h1>
-                        <p>{currentPartner?.point.address}</p>
+                        <p className={'company-name'}>{currentPartner?.title}</p>
+                        <p className={'light-text'}>{currentPartner?.point.address}</p>
                     </div>
 
                 </div>
-                <p>{currentPartner?.description}</p>
-                <p className={'text_cell_'}>
-                    Возможное использование баллов:
+                <p className={'body-1'}>{currentPartner?.description}</p>
+                <p className={clsx('text_cell_', 'light-text')}
+                >
+                    Предложения партнёра:
                 </p>
                 <p>{currentPartner?.services.map((marker: Service) => (
-                    <li>{marker.title}</li>
+                    <li className={'body-1'}>{marker.title}</li>
                 ))}
                 </p>
-
             </div> : ""}
         </div>
     );

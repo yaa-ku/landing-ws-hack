@@ -1,5 +1,6 @@
 @import "src/styles/mixins";
 @import "src/styles/colors";
+@import "src/styles/fonts";
 
 .best_students_block {
   display: flex;
@@ -17,6 +18,7 @@
   background: rgb(232,18,159);
   background: linear-gradient(90deg, rgba(232,18,159,1) 0%, rgba(9,9,121,1) 100%, rgba(21,17,236,1) 100%);
   width: 100%;
+  border-radius: 10px;
 }
 
 .gradient_div {
@@ -95,4 +97,23 @@
 
 .wrapper{
   width: 100%;
+}
+
+.small-text{
+  color: #717171;
+  font-family: Cirle;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.number{
+  color: $white;
+  text-align: center;
+  font-family: Angry;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
 }

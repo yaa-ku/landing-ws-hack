@@ -4,17 +4,15 @@ import s from './studentInfoBlock.module.scss'
 import Image from 'next/image';
 import clsx from 'clsx';
 
-type Props = {
-    
-};
-export const StudentInfolock = (props: Props) => {
+export const StudentInfoBlock = () => {
     return (
         <div className={clsx(s['info-block'], 'section')}>
             <div className={s['info-block__article']}>
                 <div className={s['article__img']}>
                         <Image src={'/girl-img.png'} alt={'girl-img'}
                                width={543}
-                               height={547}/>
+                               height={547}
+                        />
                 </div>
                 <div className={s['article__paragraph']}>
                     <h2 className={'title-2--secondary'}>
@@ -70,7 +68,7 @@ export const StudentInfolock = (props: Props) => {
             </div>
 
             <div className={clsx(s['info-block__article'])}>
-                <div className={ clsx(s['article__paragraph'])}>
+                <div className={ clsx(s['article__paragraph'], s['align-top'])}>
                     <h2 className={clsx('title-2--secondary')}>
                         БУДЬ<span> </span><span className={s['highlight']}>В КУРСЕ!</span>
                     </h2>

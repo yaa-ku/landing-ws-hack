@@ -1,9 +1,24 @@
+$laptop-XL: 2000px;
 $laptop-L: 1440px;
 $laptop: 1024px;
 $tablet: 768px;
 $mobile-L: 425px;
 $mobile-M: 375px;
 $mobile-S: 320px;
+
+// laptop-XL
+
+@mixin bp-laptop-XL-equal-or-less {
+  @media screen and (max-width: $laptop-XL) {
+    @content;
+  }
+}
+
+@mixin bp-laptop-XL-higher {
+  @media screen and (min-width: $laptop-XL + 1) {
+    @content;
+  }
+}
 
 // laptop-L
 

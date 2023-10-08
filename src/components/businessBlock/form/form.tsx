@@ -91,12 +91,12 @@ export const Form = () => {
                 </div>
 
                 <div>
-                    <label htmlFor={'checkbox-1'}>Тык 1</label>
+                    <label htmlFor={'checkbox-1'} className={'body-1'}>Интересует размещение рекламы </label>
                     <input type={'checkbox'} id={'checkbox-1'} {...register('checkbox1')}/>
                 </div>
 
                 <div>
-                    <label htmlFor={'checkbox-2'}>Тык 2</label>
+                    <label htmlFor={'checkbox-2'} className={'body-1'}>Интересует размещение вакансий </label>
                     <input type={'checkbox'} id={'checkbox-2'} {...register('checkbox2')}/>
                 </div>
 

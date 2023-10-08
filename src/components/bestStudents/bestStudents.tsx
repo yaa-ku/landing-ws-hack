@@ -57,18 +57,18 @@ export const BestStudents = () => {
                 <div className={clsx(s['best_students_block_list'])}>
                     {allStudents?.map((student, i) =>
                         <div className={s['profile_item']} key={student.users.at(0)?.user.id}>
-                            <span>{student.users.at(0)?.rank}</span>
+                            <span className={s['number']}>{student.users.at(0)?.rank}</span>
                             <img className={clsx(s['profile_image'], i === 0? s['borderGold'] : i === 1? s['borderSilver'] : i === 2? s['borderBronze'] : '')} src={`https://festu.dicamp.ru/api/cs-service/containers/${student.users.at(0)?.user.imageId}/download/format-or-original/?format=preview`} alt="Картинка профиля" />
                             <div className={s['gradient_div']}>
                                 <div>
                                     <div className={s['student_info']}>
                                         <div className={s['name_and_uni']}>
-                                            <span className={s['student_name']}>{student.users.at(0)?.user.name}</span>
-                                            <span>ДВГУПС</span>
+                                            <span className={clsx(s['student_name'], 'body-1')}>{student.users.at(0)?.user.name}</span>
+                                            <span className={s['small-text']}>ДВГУПС</span>
                                         </div>
                                         <div className={s['points_and_text']}>
-                                            <span>{student.users.at(0)?.points}</span>
-                                            <span>баллов</span>
+                                            <span className={'body-1'}>{student.users.at(0)?.points}</span>
+                                            <span className={s['small-text']}>баллов</span>
                                         </div>
                                     </div>
                                     <div className={s['gradient_line']}></div>
