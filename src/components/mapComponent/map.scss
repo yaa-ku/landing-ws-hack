@@ -1,14 +1,16 @@
 .horizontal-split-container {
   display: flex;
-  height: 75%;
-
+  height: 600px;
 }
 
 .left-panel {
   flex: 0.7;
   background-color: #f0f0f0;
 }
-
+.map {
+  width: 100% ;
+  height: 100%;
+}
 .right-panel {
   flex: 0.3;
    padding: 60px;

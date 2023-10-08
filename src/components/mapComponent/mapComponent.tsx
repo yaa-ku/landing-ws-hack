@@ -2,16 +2,13 @@
 import React, {useEffect, useState} from 'react';
 import {YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 import './map.scss';
+
 async function get_request_api<T>(url: string): Promise<T> {
-    console.log("API REQUEST")
-    console.log(url)
     return fetch(url)
         .then(response => {
             if (!response.ok) {
-                console.log("API RESPONSE BAD")
                 throw new Error(response.statusText)
             }
-            console.log("API RESPONCE OK")
             return response.json() as Promise<T>
         })
 }
@@ -20,7 +17,7 @@ const MapComponent: React.FC = () => {
     interface Point {
         longitude: number,
         latitude: number,
-        address: string
+        address: string,
     }
 
     interface Partner {
@@ -31,7 +28,7 @@ const MapComponent: React.FC = () => {
     }
 
     interface Service {
-        title: string
+        title: string,
     }
 
     interface PartnerDescription {
@@ -48,7 +45,6 @@ const MapComponent: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             let data = await get_request_api<Array<Partner>>("https://ht.dicamp.ru/api/partners/list")
-            console.log(data)
             setMarkers(data);
         }
         fetchData()
@@ -58,11 +54,9 @@ const MapComponent: React.FC = () => {
     function handleMarkerClick(marker: Partner) {
         const fetchData = async () => {
             let data = await get_request_api<PartnerDescription>("https://ht.dicamp.ru/api/partners/" + marker.id)
-            console.log(data)
             setCurrentPartner(data);
         }
         fetchData()
-        console.log(marker)
     }
 
     return (
@@ -71,10 +65,10 @@ const MapComponent: React.FC = () => {
                 <YMaps>
                     <Map
                         defaultState={{
-                            center: [48.51578, 135.5117],
+                            center: [48.4827, 135.084],
                             zoom: 10,
                         }}
-                        style={{width:'100%' , height: '100%'}}
+                        className="map"
                     >
                         {markers?.map((marker: Partner) => (
                             <Placemark
@@ -85,10 +79,9 @@ const MapComponent: React.FC = () => {
                                 }}
                                 options={{
                                     iconLayout: 'default#image',
-                                    // iconContentLayout: '<div style="background-color: blue; width: 20px; height: 20px;"></div>',
-                                    iconImageHref: "https://ht.dicamp.ru/" + marker.iconUrl, // Используем URL-адрес изображения иконки с сервера
-                                    iconImageSize: [60, 30], // Установите размер как [60, 60] для круглой иконки
-                                    // iconContentOffset: [0, 0],
+                                    iconImageHref: "https://ht.dicamp.ru/" + marker.iconUrl,
+                                    iconImageSize: [60, 30],
+
                                 }}
                                 onClick={() => handleMarkerClick(marker)}
                             />
@@ -97,7 +90,7 @@ const MapComponent: React.FC = () => {
                 </YMaps>
 
             </div>
-            {currentPartner? <div className="right-panel">
+            {currentPartner ? <div className="right-panel">
                 <div className="title-img-container">
                     <img className={'image'} src={`https://ht.dicamp.ru/${currentPartner?.iconUrl}`} alt=""/>
                     <div className={'name-address'}>
@@ -110,12 +103,12 @@ const MapComponent: React.FC = () => {
                 <p className={'text_cell_'}>
                     Возможное использование баллов:
                 </p>
-               <p>{currentPartner?.services.map((marker:Service) => (
-                            <li>{marker.title}</li>
-                        ))}
-                    </p>
+                <p>{currentPartner?.services.map((marker: Service) => (
+                    <li>{marker.title}</li>
+                ))}
+                </p>
 
-            </div>:""}
+            </div> : ""}
         </div>
     );
 };
