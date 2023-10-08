@@ -5,6 +5,12 @@
   @include flex-row(30%);
   padding-top: 50px;
 
+  &-block{
+    width: 50%;
+    @include flex-row();
+    justify-content: space-between;
+  }
+
   &__logo{
     width: 183px;
     height: 55px;

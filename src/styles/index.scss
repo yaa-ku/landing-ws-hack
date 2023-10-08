@@ -99,4 +99,24 @@
   }
 }
 
+.button-text{
+  @extend %primary-font;
+  cursor: pointer;
+  font-size: 20px;
+  color: $accent-text-color;
+  transition: $default-transition;
+
+  &:hover {
+    color: $primary-text-color;
+    transition: $default-transition;
+  }
+
+  &--bold{
+    @extend %primary-font-bold;
+    cursor: pointer;
+    font-size: 20px;
+    color: $primary-text-color;
+  }
+}
+
 

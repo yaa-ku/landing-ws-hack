@@ -5,6 +5,7 @@ import s from './form.module.scss'
 import Image from 'next/image';
 import clsx from 'clsx';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { Button } from '@/ui-kit/button/button';
 
 interface IFormInput {
     name: string;
@@ -100,7 +101,10 @@ export const Form = () => {
                 </div>
 
 
-                <button className={clsx(s['button'], 'body-2')} type={'submit'}>Отправить заявку</button>
+                <Button type={'submit'}
+                        label={'Отправить заявку'}
+                        style={'secondary'}
+                />
             </form>
         </div>
     );
